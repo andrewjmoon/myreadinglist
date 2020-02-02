@@ -17,10 +17,10 @@ const BookCategory = props => {
           return (
             <div key={id}>
               <BookShelf
-                category={category}
-                title={title}
                 books={props.books}
                 updateBookStatus={props.updateBookStatus}
+                category={category}
+                title={title}
               />
             </div>
           );

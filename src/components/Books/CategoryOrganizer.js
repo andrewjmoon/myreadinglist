@@ -3,12 +3,12 @@ import BookList from './BookList';
 
 export default class BookShelf extends Component {
   render() {
-    const { updateBookStatus, books } = this.props;
+    const { updateBookStatus, books, title, category } = this.props;
 
     return (
       <div>
         <div className="bookshelf">
-          <h2 className="bookshelf-title">{this.props.category}</h2>
+          <h2 className="bookshelf-title">{category}</h2>
           <div className="bookshelf-books">
             <ol className="books-grid">
               {books
@@ -18,7 +18,7 @@ export default class BookShelf extends Component {
                     <BookList
                       book={book}
                       updateBookStatus={updateBookStatus}
-                      currentBookStatus={this.props.title}
+                      currentBookStatus={title}
                     />
                   </li>
                 ))}
